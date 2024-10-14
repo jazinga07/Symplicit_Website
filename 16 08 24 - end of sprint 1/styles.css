@@ -1,0 +1,484 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Background image */
+#background img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header styles */
+.logo {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.topnav {
+    background-color: #4a2d75; /* Darker background color */
+    text-align: center;
+    padding: 14px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #61a5e8; /* Accent color for the bottom border */
+}
+
+.topnav .nav-item {
+    color: white; /* Text color */
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.topnav .nav-item.active {
+    background-color: #61a5e8; /* Highlight active link */
+    color: #4a2d75; /* Text color for active link */
+}
+
+
+
+/* Container styles */
+.info-box {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid lightblue;
+    border-radius: 0; /* Flat and sharp borders */
+    text-align: left;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+#info-box-1 {
+    margin-top: 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#info-box-1 p {
+    margin: 0;
+    color:#281840;
+    font-size: 20px; /* Larger text */
+    line-height: 1.2; /* Reduced line height to reduce space */
+}
+
+#info-box-1 div {
+    display: flex;
+    gap: 10px; /* Space between images */
+}
+
+#info-box-1 img {
+    width: 170px; /* Original size */
+    height: 170px;
+    border: 2px solid lightblue; /* Light blue border */
+    padding: 10px; /* Padding to ensure border fits nicely */
+}
+
+@media screen and (max-width: 768px) {
+    #info-box-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    #info-box-1 img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Info Box 2 */
+#info-box-2 {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.review-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.review {
+    margin-bottom: 15px;
+}
+
+.review-stars {
+    font-size: 18px;
+    color: lightblue;
+    margin-bottom: 5px; /* Small gap between stars and text */
+}
+
+.review p {
+    margin: 0;
+    line-height: 1.4;
+    color: lightblue; /* Light blue text */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid lightblue;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.review-image {
+    width: 170px; /* Increased size */
+    height: auto;
+    border: 2px solid lightblue; /* Light blue border */
+    padding: 10px; /* Padding to ensure border fits nicely */
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-align: right;
+    padding: 30px 40px; /* Increased padding */
+    width: 100%;
+    font-family: Georgia, serif;
+    font-size: 18px; /* Larger text */
+    display: flex; /* Use flexbox to align items */
+    align-items: center;
+    justify-content: flex-end; /* Aligns other elements to the right */
+    gap: 20px; /* Gap between the image and text */
+}
+
+.footer .f-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10%;
+}
+
+/* Recipes Page Styles */
+.recipes-info-box {
+    margin-top: 0px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid lightblue;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures any floating elements don't overflow */
+}
+
+/* Filter Box Styles */
+.filter-box {
+    width: 40%;
+    background-color: #4a2d75;
+    color: #61a5e8;
+    padding: 15px;
+    overflow-y: auto;
+    float: left;
+    height: 400px; /* Fixed height to keep it compact with scrolling */
+    border: 2px solid #61a5e8;
+    border-radius: 15px; /* Rounded corners */
+    box-sizing: border-box;
+    max-height: 400px; /* Ensures it doesn't grow too large */
+}
+
+/* Collapsible filter categories */
+.filter-category {
+    margin-bottom: 20px;
+}
+
+.filter-category h4 {
+    margin-bottom: 10px;
+    color: #61a5e8;
+    cursor: pointer;
+}
+
+.filter-category-content {
+    display: none;
+    margin-left: 20px;
+}
+
+.filter-category-content select {
+    width: 100%;
+}
+
+/* Recipe List Styles */
+.recipe-list {
+    width: 55%;
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    overflow-y: auto;  /*Vertical scrolling */
+    height: 400px; /* Fixed height with scroll for recipes */
+    max-height: 400px; /* Ensures it doesn't grow too large */
+}
+
+.recipe-item {
+    position: relative;
+}
+
+.recipe-item img {
+    width: 95%;
+    height: 80%;
+    border-radius: 8px;
+    border: 2px solid #4a2d75;
+    transition: transform 0.3s, filter 0.3s;
+    display: block;
+}
+
+.recipe-item a {
+    display: block;
+}
+
+/* Popular Recipes Styles */
+#recipes-info-box-2 h2 {
+    color: darkpurple;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.popular-recipes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    overflow-y: auto; /* Vertical scrolling */
+    height: 400px; /* Fixed height with scroll for popular recipes */
+    max-height: 400px; /* Ensures it doesn't grow too large */
+}
+
+.popular-recipes .recipe-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #4a2d75;
+    transition: transform 0.3s, filter 0.3s;
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .filter-box, .recipe-list, .popular-recipes {
+        width: 100%;
+        float: none;
+        height: auto; /* Allow the height to adjust on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .recipe-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular-recipes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .recipe-list {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-recipes {
+        grid-template-columns: 1fr;
+    }
+
+    .topnav a {
+        font-size: 16px; /* Adjust font size for very small screens */
+    }
+}
+
+
+/* General styles remain the same */
+
+/* Recipe Info Box Styles */
+#recipe-info-box {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid lightblue;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px; /* Fixed height, adjust as needed */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Recipe Image */
+.recipe-image {
+    width: 25%; /* Takes up 25% of the width */
+    padding-right: 20px; /* Space between the image and text */
+}
+
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #4a2d75;
+}
+
+/* Recipe Details */
+.recipe-details {
+    width: 75%; /* Takes up the remaining 75% of the width */
+    overflow-y: auto;
+}
+
+.recipe-details h2 {
+    margin-bottom: 10px;
+    color: #4a2d75;
+}
+
+.recipe-details p {
+    margin-bottom: 15px;
+    color: #4a2d75;
+}
+
+.recipe-details h3 {
+    margin-bottom: 10px;
+    color: #61a5e8;
+}
+
+.recipe-details ul, .recipe-details ol {
+    margin-left: 20px;
+    color: #4a2d75;
+}
+
+.recipe-details ul li, .recipe-details ol li {
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #recipe-info-box {
+        flex-direction: column;
+        height: auto; /* Adjust to content height */
+    }
+
+    .recipe-image {
+        width: 100%;
+        height: 100%;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .recipe-details {
+        width: 100%;
+    }
+
+    #recipe-review-box {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+
+/* Scoped Contact Page Container */
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stack the boxes on top of each other */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Contact Form and Review Box */
+.contact-box {
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    margin-top: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid lightblue;
+    border-radius: 0;
+    text-align: left;
+    font-family: Georgia, serif;
+}
+
+/* Form Styles */
+.contact-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4b0082;
+}
+
+.contact-box input[type="text"],
+.contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-box textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+.contact-box button {
+    background-color: #4a2d75;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-box button:hover {
+    background-color: #3e2463;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 30px;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: lightblue;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack the boxes on smaller screens */
+    }
+
+    .contact-box {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
