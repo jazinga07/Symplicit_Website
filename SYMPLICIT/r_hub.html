@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes - Symplicit</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript for collapsible filter categories
+        document.addEventListener('DOMContentLoaded', () => {
+            const categories = document.querySelectorAll('.filter-category h4');
+            categories.forEach(category => {
+                category.addEventListener('click', () => {
+                    const content = category.nextElementSibling;
+                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="background">
+        <img src="symplicit_imgs/bg_imgs/2.jpeg" alt="Background Image">
+    </div>
+
+    <header>
+        <!-- Header remains the same -->
+        <div class="logo">
+            <img src="symplicit_imgs/logo_imgs/logo_1.png" alt="Symplicit Logo">
+        </div>
+    </header>
+
+    <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#recipes" class="active">Recipes</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <!-- New Info Box 1 for Recipes Page -->
+        <div id="recipes-info-box-1" class="recipes-info-box">
+            <!-- Filter section -->
+            <div class="filter-box">
+                <!-- Content for filter options -->
+                <h3>Filter Recipes</h3>
+
+                <div class="filter-category">
+                    <h4>Meat</h4>
+                    <div class="filter-category-content">
+                            <input type="checkbox" id="chicken" name="chicken"><label for="chicken">Chicken</label><br>
+                            <input type="checkbox" id="beef" name="beef"><label for="beef">Beef</label><br>
+                            <input type="checkbox" id="lamb" name="lamb"><label for="lamb">Lamb</label><br>
+                            <input type="checkbox" id="none" name="none"><label for="none">None</label><br>
+                    </div>
+                </div>
+
+                <!--<div class="filter-category">-->
+                    <h4>Preparation Time</h4>
+                    <input type="range" min="5" max="180" step="5" id="prep-time" name="prep-time" oninput="this.nextElementSibling.value = this.value + ' mins'">
+                    <output>90 mins</output>
+
+                <!--</div>-->
+                <div class="filter-category">
+                    <h4>Allergen Specific</h4>
+                    <div class="filter-category-content">
+                        <input type="checkbox" id="nuts" name="nuts"><label for="nuts">Nuts</label><br>
+                        <input type="checkbox" id="gluten" name="gluten"><label for="gluten">Gluten</label><br>
+                        <input type="checkbox" id="vegan" name="vegan"><label for="vegan">Vegan</label><br>
+                        <input type="checkbox" id="vegetarian" name="vegetarian"><label for="vegetarian">Vegeterian</label><br>
+                        <input type="checkbox" id="none" name="none"><label for="none">None</label><br>
+                    </div>
+                </div>
+
+                <div class="filter-category">
+                    <h4>Spice Level</h4>
+                    <div class="filter-category-content">
+                            <input type="checkbox" id="mild" name="mild"><label for="mild">Mild</label><br>
+                            <input type="checkbox" id="medium" name="medium"><label for="medium">Medium</label><br>
+                            <input type="checkbox" id="hot" name="hot"><label for="hot">Hot</label><br>
+                            <input type="checkbox" id="none" name="none"><label for="none">None</label><br>
+                    </div>
+                </div>
+
+                <div class="filter-category">
+                    <h4>Cooking Method</h4>
+                    <div class="filter-category-content">
+                            <input type="checkbox" id="grill" name="grill"><label for="grill">Grill</label><br>
+                            <input type="checkbox" id="bake" name="bake"><label for="bake">Bake</label><br>
+                            <input type="checkbox" id="fry" name="fry"><label for="fry">Fry</label><br>
+                            <input type="checkbox" id="boil" name="boil"><label for="boil">Boil</label><br>
+                            <input type="checkbox" id="none" name="none"><label for="none">None</label><br>
+                    </div>
+                </div>
+            </div>
+
+           
+    <div class="recipe-list">
+    <!-- Ensure each recipe item links to its specific subpage -->
+          <a href="taco1.html" class="recipe-item">
+             <img src="symplicit_imgs/recipe_imgs/taco1.jpeg" alt="Recipe 1">
+          </a>
+
+          <a href="burrito1.html" class="recipe-item">
+             <img src="symplicit_imgs/recipe_imgs/burr1.jpeg" alt="Recipe 2">
+          </a>
+
+          <a href="ramen1.html" class="recipe-item">
+             <img src="symplicit_imgs/recipe_imgs/ramen1.jpeg" alt="Recipe 3">
+          </a>
+
+          <a href="dumplings1.html" class="recipe-item">
+             <img src="symplicit_imgs/recipe_imgs/dumps1.jpeg" alt="Recipe 4">
+          </a>
+
+          <a href="curry1.html" class="recipe-item">
+             <img src="symplicit_imgs/recipe_imgs/curry1.jpeg" alt="Recipe 5">
+          </a>
+
+          <a href="burger1.html" class="recipe-item">
+             <img src="symplicit_imgs/recipe_imgs/burger1.jpeg" alt="Recipe 6">
+          </a>
+
+          <a href="salad1.html" class="recipe-item">
+            <img src="symplicit_imgs/recipe_imgs/salad1.jpeg" alt="Recipe 7">
+         </a>
+
+         <a href="salad2.html" class="recipe-item">
+            <img src="symplicit_imgs/recipe_imgs/salad2.jpeg" alt="Recipe 8">
+         </a>
+
+         <a href="springrolls.html" class="recipe-item">
+            <img src="symplicit_imgs/recipe_imgs/s_rolls1.jpeg" alt="Recipe 9">
+         </a>
+
+         <a href="btoast1.html" class="recipe-item">
+            <img src="symplicit_imgs/recipe_imgs/btoast1.jpeg" alt="Recipe 10">
+         </a>
+
+         <a href="btoast2.html" class="recipe-item">
+            <img src="symplicit_imgs/recipe_imgs/btoast2.jpeg" alt="Recipe 11">
+         </a>
+
+         <a href="pasta1.html" class="recipe-item">
+            <img src="symplicit_imgs/recipe_imgs/pasta1.jpeg" alt="Recipe 12">
+         </a>
+     <!--  Add more recipe items as needed, ensuring each <a> tag points to its specific subpage -->
+    </div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+
+        
+        <div id="recipes-info-box-2" class="recipes-info-box">
+            <h2>Popular Recipes</h2>
+
+          <!-- Popular Recipes Section -->
+        <div class="popular-recipes">
+            <!-- Ensure each popular recipe item links to its specific subpage -->
+            <a href="popular1.html" class="recipe-item">
+               <img src="symplicit_imgs/recipe_imgs/s_rolls1.jpeg" alt="Popular Recipe 1">
+            </a>
+
+            <a href="popular2.html" class="recipe-item">
+               <img src="symplicit_imgs/recipe_imgs/salad1.jpeg" alt="Popular Recipe 2">
+            </a>
+
+            <a href="popular3.html" class="recipe-item">
+               <img src="symplicit_imgs/recipe_imgs/btoast2.jpeg" alt="Popular Recipe 3">
+            </a>
+    <!-- Add more popular recipe items as needed, ensuring each <a> tag points to its specific subpage -->
+</div>
+
+        </div>
+    </div>
+
+    <!-- Footer remains the same -->
+    <div class="footer">
+        <div class="f-links">
+            <span>123 456 7890 | 12 Bakers Street</span>
+        </div>
+    </div>
+
+</body>
+</html>
